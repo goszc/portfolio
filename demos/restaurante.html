@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Restaurante — restaurante com cozinha caseira e toques autorais, no centro da cidade.">
+    <title>Restaurante — Cozinha Autoral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        :root {
+            --color-primary: #7C2D12;
+            --color-primary-dark: #5C1D0E;
+            --color-primary-light: #C2410C;
+            --color-primary-ultra-light: #FFF7ED;
+            --color-accent: #CA8A04;
+            --color-accent-hover: #A16207;
+            --color-bg: #FFFBF5;
+            --color-bg-alt: #FEF3E2;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Karla', sans-serif;
+        }
+
+        .hero__title {
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .hero__highlight::after {
+            background: rgba(202, 138, 4, 0.12);
+        }
+
+        .section__badge {
+            background: rgba(124, 45, 18, 0.06);
+            color: var(--color-primary);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3D1C0A, #7C2D12);
+        }
+
+        .menu-card {
+            background: var(--color-bg);
+            border: 1px solid #F5E6D3;
+            border-radius: 8px;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 200ms ease;
+            cursor: default;
+        }
+
+        .menu-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .menu-card__info h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #27150A;
+            margin-bottom: 3px;
+        }
+
+        .menu-card__info p {
+            font-size: 0.82rem;
+            color: #78716C;
+        }
+
+        .menu-card__price {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            white-space: nowrap;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#hero" class="navbar__logo"><span class="navbar__logo-text"
+                    style="font-family:var(--font-heading);font-size:1.2rem;font-style:italic;"><em>Quintal do
+                        Sabor</em></span></a>
+            <button class="navbar__toggle" id="navToggle" aria-label="Menu"><span
+                    class="navbar__toggle-bar"></span><span class="navbar__toggle-bar"></span><span
+                    class="navbar__toggle-bar"></span></button>
+            <ul class="navbar__menu" id="navMenu">
+        <li><a href="../catalogo.html" class="navbar__link" style="opacity:0.6;font-size:0.8rem;">← Catálogo</a></li>
+                <li><a href="#sobre" class="navbar__link">Nossa história</a></li>
+                <li><a href="#cardapio" class="navbar__link">Cardápio</a></li>
+                <li><a href="#galeria" class="navbar__link">Fotos</a></li>
+                <li><a href="#contato" class="navbar__link">Como chegar</a></li>
+                <li><a href="#agendar" class="navbar__cta-link">Reservar mesa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="container hero__inner">
+            <div class="hero__content reveal">
+                <h1 class="hero__title">Comida boa é<br><span class="hero__highlight">memória afetiva</span></h1>
+                <p class="hero__subtitle">O Restaurante é aquele restaurante que você sai já querendo voltar.
+                    Cozinha de raiz com toques autorais, ingredientes frescos e um quintal que é um respiro no meio do
+                    centro.</p>
+                <div class="hero__actions">
+                    <a href="#agendar" class="btn btn--primary btn--lg">Reservar mesa</a>
+                    <a href="#cardapio" class="btn btn--outline btn--lg">Ver destaques do menu</a>
+                </div>
+            </div>
+            <div class="hero__visual reveal reveal--delay">
+                <div class="hero__image-wrapper">
+                    <div class="hero__image-placeholder"><svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1" opacity="0.3">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                        </svg><span>Prato destaque</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+    </section>
+
+    <section class="about section" id="sobre">
+        <div class="container about__inner">
+            <div class="about__image reveal">
+                <div class="about__image-placeholder"><svg width="64" height="64" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" opacity="0.3">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                    </svg><span>Quintal</span></div>
+            </div>
+            <div class="about__content reveal reveal--delay">
+                <span class="section__badge">Nossa história</span>
+                <h2 class="section__title">Da panela da avó pro centro da cidade</h2>
+                <p class="about__text">O Quintal nasceu de uma ideia simples: servir a comida que a gente gostaria de
+                    comer todo dia. A a chef trouxe as receitas da avó a avó e adicionou técnicas que aprendeu
+                    em 4 anos de cozinha profissional.</p>
+                <p class="about__text">O resultado? Um cardápio que muda com as estações, respeita os produtores locais
+                    e faz cada almoço valer a pena.</p>
+                <div class="about__stats">
+                    <div class="about__stat"><strong class="about__stat-number">2019</strong><span
+                            class="about__stat-label">desde</span></div>
+                    <div class="about__stat"><strong class="about__stat-number">4.8★</strong><span
+                            class="about__stat-label">no Google</span></div>
+                    <div class="about__stat"><strong class="about__stat-number">80</strong><span
+                            class="about__stat-label">lugares</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section section--alt" id="cardapio">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Cardápio</span>
+                <h2 class="section__title">Os mais pedidos</h2>
+                <p class="section__subtitle">Cardápio completo no restaurante — ele muda toda semana.</p>
+            </div>
+            <div class="menu-grid reveal">
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Fraldinha na brasa</h4>
+                        <p>Com chimichurri, arroz de alho e vinagrete</p>
+                    </div><span class="menu-card__price">R$ 52</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Risoto de camarão</h4>
+                        <p>Arroz arbóreo, camarão rosa e açafrão</p>
+                    </div><span class="menu-card__price">R$ 62</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Filé ao molho de ervas</h4>
+                        <p>Filé mignon, purê rústico e legumes salteados</p>
+                    </div><span class="menu-card__price">R$ 68</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Moqueca de peixe</h4>
+                        <p>Peixe do dia, leite de coco, dendê e arroz</p>
+                    </div><span class="menu-card__price">R$ 55</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Escondidinho de carne seca</h4>
+                        <p>Mandioca cremosa, carne seca desfiada e queijo</p>
+                    </div><span class="menu-card__price">R$ 42</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card__info">
+                        <h4>Pudim da a avó</h4>
+                        <p>Receita original da avó — não muda nunca</p>
+                    </div><span class="menu-card__price">R$ 18</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery section" id="galeria">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Fotos</span>
+                <h2 class="section__title">Nosso espaço e pratos</h2>
+            </div>
+            <div class="gallery__grid">
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Quintal</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Prato 1</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Sobremesa</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Bar</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Cozinha</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Equipe</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section section--alt" id="contato">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Como chegar</span>
+                <h2 class="section__title">Nosso endereço</h2>
+            </div>
+            <div class="contact__content">
+                <div class="contact__map reveal">
+                    <div class="contact__info">
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <div><strong>Endereço</strong>
+                                <p>Rua dos Temperos, 42 — Centro, Cidade - UF</p>
+                            </div>
+                        </div>
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" x2="12.01" y1="18" y2="18" />
+                            </svg>
+                            <div><strong>Reservas por WhatsApp</strong>
+                                <p><a href="tel:+5500000000000">(00) 00000-0000</a></p>
+                            </div>
+                        </div>
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                            <div><strong>Horário</strong>
+                                <p>Ter-Dom: 11h30 às 15h / 18h30 às 22h30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975870407856!2d-46.65342368!3d-23.56141398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c0776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1709000000000" width="100%" height="250" style="border:0;border-radius:var(--radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização"></iframe></div>
+                    <a href="https://wa.me/5500000000000?text=Oi, quero reservar uma mesa no Restaurante!"
+                        class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer"
+                        style="margin-top:24px;display:inline-flex;">Reservar pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section section" id="agendar">
+        <div class="container cta-section__inner reveal">
+            <h2 class="cta-section__title">Sua mesa tá esperando</h2>
+            <p class="cta-section__text">Reserva pelo WhatsApp. Fim de semana esgota rápido!</p>
+            <div class="cta-section__actions">
+                <a href="https://wa.me/5500000000000?text=Quero reservar mesa!" class="btn btn--accent btn--lg"
+                    target="_blank" rel="noopener noreferrer">Reservar</a>
+                <a href="tel:+5500000000000" class="btn btn--outline-light btn--lg">Ligar</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand"><span class="footer__logo"
+                    style="font-family:var(--font-heading);font-style:italic;"><em>Restaurante</em></span>
+                <p class="footer__tagline">Cozinha de raiz no centro da cidade.</p>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__heading">Links</h4>
+                <ul>
+                    <li><a href="#sobre">História</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#galeria">Fotos</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h4 class="footer__heading">Siga</h4>
+                <div class="footer__social-icons"><a href="#" class="footer__social-link" aria-label="Instagram"><svg
+                            width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg></a></div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 goszc. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5500000000000?text=Quero reservar!" class="whatsapp-float" target="_blank"
+        rel="noopener noreferrer" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg></a>
+    <script src="../script.js"></script>
+</body>
+
+</html>

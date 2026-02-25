@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbearia — barbearia masculina com corte na régua e barba artesanal.">
+    <title>Barbearia — Barbearia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        :root {
+            --color-primary: #1C1917;
+            --color-primary-dark: #0C0A09;
+            --color-primary-light: #44403C;
+            --color-primary-ultra-light: #FAFAF9;
+            --color-accent: #D97706;
+            --color-accent-hover: #B45309;
+            --font-heading: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .section__title,
+        .cta-section__title {
+            letter-spacing: 1px;
+        }
+
+        .hero__title {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            line-height: 0.95;
+        }
+
+        .hero__highlight::after {
+            background: rgba(217, 119, 6, 0.15);
+        }
+
+        .section__badge {
+            background: rgba(28, 25, 23, 0.06);
+            color: var(--color-primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            font-family: var(--font-body);
+        }
+
+        .cta-section {
+            background: var(--color-primary);
+        }
+
+        .service-card__icon {
+            background: var(--color-primary);
+            color: #FDE68A;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#hero" class="navbar__logo">
+                <span class="navbar__logo-text"
+                    style="font-family:var(--font-heading);font-size:1.4rem;letter-spacing:2px;">DOM NAVALHA</span>
+            </a>
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"><span
+                    class="navbar__toggle-bar"></span><span class="navbar__toggle-bar"></span><span
+                    class="navbar__toggle-bar"></span></button>
+            <ul class="navbar__menu" id="navMenu">
+        <li><a href="../catalogo.html" class="navbar__link" style="opacity:0.6;font-size:0.8rem;">← Catálogo</a></li>
+                <li><a href="#sobre" class="navbar__link">Quem somos</a></li>
+                <li><a href="#servicos" class="navbar__link">Serviços</a></li>
+                <li><a href="#galeria" class="navbar__link">Trabalhos</a></li>
+                <li><a href="#contato" class="navbar__link">Local</a></li>
+                <li><a href="#agendar" class="navbar__cta-link">Marcar horário</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="container hero__inner">
+            <div class="hero__content reveal">
+                <h1 class="hero__title">NÃO É SÓ<br><span class="hero__highlight">UM CORTE</span></h1>
+                <p class="hero__subtitle">É autoestima, é rotina, é o cara no espelho se sentir pronto. Corte na régua,
+                    barba na navalha e um café enquanto espera. Sem frescura.</p>
+                <div class="hero__actions">
+                    <a href="#agendar" class="btn btn--primary btn--lg">Marcar meu horário</a>
+                    <a href="#servicos" class="btn btn--outline btn--lg">Ver serviços e preços</a>
+                </div>
+            </div>
+            <div class="hero__visual reveal reveal--delay">
+                <div class="hero__image-wrapper">
+                    <div class="hero__image-placeholder"><svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1" opacity="0.3">
+                            <circle cx="6" cy="6" r="3" />
+                            <path d="M8.12 8.12 12 12" />
+                            <path d="M20 4 8.12 15.88" />
+                            <circle cx="6" cy="18" r="3" />
+                            <path d="M14.8 14.8 20 20" />
+                        </svg><span>Foto da Barbearia</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+    </section>
+
+    <section class="about section" id="sobre">
+        <div class="container about__inner">
+            <div class="about__image reveal">
+                <div class="about__image-placeholder"><svg width="64" height="64" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" opacity="0.3">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                    </svg><span>Ambiente interno</span></div>
+            </div>
+            <div class="about__content reveal reveal--delay">
+                <span class="section__badge">Quem somos</span>
+                <h2 class="section__title">Tradição sem ser careta</h2>
+                <p class="about__text">A Barbearia abriu em 2016 num quartinho de fundo. Hoje atende num espaço de
+                    80m² no centro, mas o espírito é o mesmo: conversa boa, cerveja gelada e corte sem pressa.</p>
+                <p class="about__text">5 barbeiros, todos formados pela escola Barber Academy. Cada um tem seu estilo,
+                    mas o padrão de qualidade é um só.</p>
+                <div class="about__stats">
+                    <div class="about__stat"><strong class="about__stat-number">8</strong><span
+                            class="about__stat-label">anos de estrada</span></div>
+                    <div class="about__stat"><strong class="about__stat-number">1.200+</strong><span
+                            class="about__stat-label">clientes por mês</span></div>
+                    <div class="about__stat"><strong class="about__stat-number">5</strong><span
+                            class="about__stat-label">barbeiros</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section section--alt" id="servicos">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Serviços</span>
+                <h2 class="section__title">Na régua</h2>
+            </div>
+            <div class="services__grid">
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="6" cy="6" r="3" />
+                            <path d="M8.12 8.12 12 12" />
+                            <path d="M20 4 8.12 15.88" />
+                            <circle cx="6" cy="18" r="3" />
+                            <path d="M14.8 14.8 20 20" />
+                        </svg></div>
+                    <h3 class="service-card__title">Corte — R$ 45</h3>
+                    <p class="service-card__desc">Máquina ou tesoura, degradê, social, americano. Finalização com pomada
+                        inclusa.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                        </svg></div>
+                    <h3 class="service-card__title">Barba — R$ 35</h3>
+                    <p class="service-card__desc">Toalha quente, espuma artesanal, navalha e pós-barba. O ritual
+                        completo.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg></div>
+                    <h3 class="service-card__title">Combo — R$ 70</h3>
+                    <p class="service-card__desc">Corte + barba com desconto. O mais pedido da casa.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                            <line x1="16" x2="2" y1="8" y2="22" />
+                        </svg></div>
+                    <h3 class="service-card__title">Sobrancelha — R$ 15</h3>
+                    <p class="service-card__desc">Alinhamento com cera ou navalha. Limpo e natural.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                            <line x1="4" x2="4" y1="22" y2="15" />
+                        </svg></div>
+                    <h3 class="service-card__title">Pigmentação — R$ 60</h3>
+                    <p class="service-card__desc">Barba com falhas? A pigmentação preenche e dura até 15 dias.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg></div>
+                    <h3 class="service-card__title">Hidratação — R$ 40</h3>
+                    <p class="service-card__desc">Tratamento capilar profundo pra cabelo seco ou danificado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery section" id="galeria">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Trabalhos</span>
+                <h2 class="section__title">Nosso portfólio</h2>
+            </div>
+            <div class="gallery__grid">
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Degradê</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Barba artesanal</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Social moderno</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Ambiente</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Equipe</span></div>
+                </div>
+                <div class="gallery__item reveal">
+                    <div class="gallery__placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" opacity="0.4">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg><span>Corte infantil</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section section--alt" id="contato">
+        <div class="container">
+            <div class="section__header reveal"><span class="section__badge">Endereço</span>
+                <h2 class="section__title">Cola aqui</h2>
+            </div>
+            <div class="contact__content">
+                <div class="contact__map reveal">
+                    <div class="contact__info">
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <div><strong>Endereço</strong>
+                                <p>Rua do Estilo, 77 — Centro, Cidade - UF</p>
+                            </div>
+                        </div>
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" x2="12.01" y1="18" y2="18" />
+                            </svg>
+                            <div><strong>WhatsApp</strong>
+                                <p><a href="tel:+5500000000000">(00) 00000-0000</a></p>
+                            </div>
+                        </div>
+                        <div class="contact__info-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                            <div><strong>Horário</strong>
+                                <p>Seg-Sáb: 9h às 20h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975870407856!2d-46.65342368!3d-23.56141398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c0776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1709000000000" width="100%" height="250" style="border:0;border-radius:var(--radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização"></iframe></div>
+                    <a href="https://wa.me/5500000000000?text=E aí, quero marcar um horário!"
+                        class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer"
+                        style="margin-top:24px;display:inline-flex;">Agendar pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section section" id="agendar">
+        <div class="container cta-section__inner reveal">
+            <h2 class="cta-section__title">Sem fila. Sem espera.</h2>
+            <p class="cta-section__text">Agenda pelo WhatsApp e chega na hora. Simples assim.</p>
+            <div class="cta-section__actions">
+                <a href="https://wa.me/5500000000000?text=Quero marcar um horário!" class="btn btn--accent btn--lg"
+                    target="_blank" rel="noopener noreferrer">Marcar agora</a>
+                <a href="tel:+5500000000000" class="btn btn--outline-light btn--lg">Ligar</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand"><span class="footer__logo"
+                    style="font-family:var(--font-heading);letter-spacing:2px;">DOM NAVALHA</span>
+                <p class="footer__tagline">Barbearia masculina desde 2016.</p>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__heading">Links</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Trabalhos</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h4 class="footer__heading">Siga</h4>
+                <div class="footer__social-icons"><a href="#" class="footer__social-link" aria-label="Instagram"><svg
+                            width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg></a><a href="#" class="footer__social-link" aria-label="TikTok"><svg width="22"
+                            height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                        </svg></a></div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 goszc. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5500000000000?text=Quero marcar um horário!" class="whatsapp-float" target="_blank"
+        rel="noopener noreferrer" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg></a>
+    <script src="../script.js"></script>
+</body>
+
+</html>
